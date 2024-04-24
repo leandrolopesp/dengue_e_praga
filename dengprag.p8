@@ -764,12 +764,6 @@ function drw_player(p)
  
  --hitbox
 -- rect(p.cx-p.cr,p.cy+p.cr,p.cx+p.cr,p.cy-p.cr,8) 
-
-
- spr(118,p1.x-26,p1.y+4)
- spr(102,p1.x-26-flr((t%24)/6) ,p1.y+4)
- spr(102,p1.x-26+flr((t%24)/6) ,p1.y+4,1,1,true)
- spr(100,p1.x-30,p1.y,2,2,blink,false)
 end
 
 function drw_stats(n)
@@ -845,9 +839,8 @@ function drw_map(s)
  end
 end
 
-
+--todo
 function drw_shorties(p)
-
  for i in all(p.stg.shorties)do
 
   if i.sleep then
@@ -860,25 +853,32 @@ function drw_shorties(p)
    (t%9>3)
    )
   end
-  
+ 
 --  pset(i.cx,i.cy,8+nm(blink))
 --  circ(i.cx,i.cy,i.cr,8)
 --  line(p1.x,p1.y,i.x,i.y,9)
-  circ(i.cx,i.cy,i.sr,10)
+--  circ(i.cx,i.cy,i.sr,10)
  end
 end
 
 
-
+--todo
 function drw_paquitas()
-
 pal(8,12)
 spr(41+flr((t%15)/5),p1.x-14,p1.y-4,1,2,(t%15>7))
 spr(41+flr((t%15)/5),p1.x-6,p1.y-4,1,2,(t%15>7))
 pal()
 spr(41+flr((t%15)/5),p1.x-10,p1.y,1,2,(t%15<7))
-
 end
+
+--todo
+function drw_ship()
+ spr(118,p1.x-26,p1.y+4)
+ spr(102,p1.x-26-flr((t%24)/6) ,p1.y+4)
+ spr(102,p1.x-26+flr((t%24)/6) ,p1.y+4,1,1,true)
+ spr(100,p1.x-30,p1.y,2,2,blink,false)
+end
+
 -->8
 --update
 
