@@ -2,9 +2,21 @@ pico-8 cartridge // http://www.pico-8.com
 version 41
 __lua__
 --todo
---arriving lift
+--add food
+--lift arriving next level
+--test phone(ok?)
+--map blocks throws error lvl 2
 --drawing order
---test phone (ok?)
+--enemies
+  --tornado
+  --bees
+  --paquitas
+  --claudia
+--items themselves
+
+--find if something is still in portuguese
+--drop developing tools tab
+
 
 coordc=split"-1,1,0,0,1,1,-1,-1"
 coordl=split"0,0,-1,1,1,-1,-1,1"
@@ -112,9 +124,7 @@ function move_pl()
      p[j].x+=spd*coordc[i+1]
      p[j].y+=spd*coordl[i+1]
     end
-     
     if(i==3)p[j].visible=true
-    
    end
   end
  end
